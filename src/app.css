@@ -1,0 +1,239 @@
+:root {
+	font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+	background-color: #f5f5f5;
+	color: #1f2933;
+	line-height: 1.4;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background: linear-gradient(180deg, #fdfdfd 0%, #edf0f5 100%);
+}
+
+body.modal-open {
+	overflow: hidden;
+}
+
+main {
+	padding: 1.5rem;
+	max-width: 1200px;
+	margin: 0 auto 4rem;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+	font-weight: 600;
+}
+
+section.panel {
+	background: #fff;
+	border-radius: 16px;
+	padding: 1.5rem;
+	margin-top: 1.5rem;
+	box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.resumen-wrapper {
+	border: 1px solid #e5e7eb;
+	border-radius: 14px;
+	padding: 1rem;
+	margin-top: 1rem;
+	overflow-x: auto;
+}
+
+.tabla-scroll {
+	width: 100%;
+	overflow-x: auto;
+}
+
+.tabla-scroll table {
+	min-width: 720px;
+}
+
+.grid-two {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1rem;
+}
+
+label {
+	display: flex;
+	flex-direction: column;
+	font-size: 0.9rem;
+	color: #475467;
+	gap: 0.35rem;
+}
+
+input,
+textarea,
+select,
+button {
+	font: inherit;
+}
+
+input,
+textarea,
+select {
+	padding: 0.65rem 0.75rem;
+	border-radius: 10px;
+	border: 1px solid #ced4da;
+	background: #fff;
+}
+
+button {
+	border: none;
+	border-radius: 999px;
+	padding: 0.65rem 1.2rem;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+button.primary {
+	background: #111826;
+	color: #fff;
+}
+
+button.secondary {
+	background: #e5e7eb;
+	color: #111826;
+}
+
+button.danger {
+	background: #fee2e2;
+	color: #b91c1c;
+}
+
+.tag {
+	padding: 0.25rem 0.75rem;
+	border-radius: 999px;
+	background: #eef2ff;
+	color: #312e81;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.tabla-resumen {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 1rem;
+}
+
+.tabla-resumen th,
+.tabla-resumen td {
+	padding: 0.75rem;
+	border-bottom: 1px solid #eaecf0;
+	text-align: left;
+	font-size: 0.92rem;
+}
+
+.tabla-resumen th {
+	background: #f8fafc;
+	font-weight: 600;
+	color: #475467;
+}
+
+.alerta {
+	padding: 0.75rem 1rem;
+	border-radius: 12px;
+	background: #fff7ed;
+	color: #9a3412;
+}
+
+.ok {
+	color: #15803d;
+}
+
+.salidas-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 0.75rem;
+	margin-top: 1rem;
+}
+
+.salida-card {
+	border: 1px solid transparent;
+	border-radius: 16px;
+	padding: 1rem;
+	background: #0f172a;
+	color: #f8fafc;
+	cursor: pointer;
+	text-align: left;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+	box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
+	opacity: 0.75;
+}
+
+.salida-card.active {
+	opacity: 1;
+	border-color: #60a5fa;
+	box-shadow: 0 15px 30px rgba(15, 23, 42, 0.35);
+}
+
+.salida-card:hover {
+	transform: translateY(-2px);
+	opacity: 0.95;
+}
+
+.salida-card small {
+	display: block;
+	color: rgba(248, 250, 252, 0.75);
+}
+
+.accent-label {
+	color: #0f172a;
+	font-weight: 500;
+}
+
+.accent-text {
+	color: #0f172a;
+	font-weight: 700;
+}
+
+.warn {
+	color: #b45309;
+}
+
+@media print {
+	body {
+		background: #fff;
+	}
+
+	main {
+		padding: 0.5rem;
+	}
+
+	header,
+	section.panel:not(.printable),
+	button,
+	.tag,
+	.modal-overlay {
+		display: none !important;
+	}
+
+	section.printable {
+		box-shadow: none;
+		margin-top: 0;
+	}
+
+	.resumen-wrapper {
+		border: none;
+		padding: 0;
+	}
+}
+
+@media (max-width: 640px) {
+	main {
+		padding: 1rem;
+	}
+
+	section.panel {
+		padding: 1rem;
+	}
+}
