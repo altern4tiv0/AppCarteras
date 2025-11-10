@@ -1,6 +1,6 @@
 # App Carteras
 
-Aplicación web móvil para emprendedores que venden carteras de manera ambulatoria. Centraliza el control diario de inventario, gastos, ingresos por método de pago e inconsistencias entre stock y ventas, sin necesidad de múltiples hojas de cálculo.
+Aplicación web móvil. Centraliza el control diario de inventario, gastos, ingresos por método de pago e inconsistencias entre stock y ventas, sin necesidad de múltiples hojas de cálculo.
 
 ## ¿Qué problema resuelve?
 - **Asignación flexible del stock**: soporta jornadas con stock repartido por vendedor o un único punto de venta compartido.
